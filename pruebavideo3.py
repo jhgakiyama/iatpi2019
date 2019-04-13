@@ -1,6 +1,6 @@
 # https://www.youtube.com/watch?v=269QJ5joMCc
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.datasets import load_iris, load_breast_cancer
+from sklearn.datasets import load_iris  # load_breast_cancer
 from sklearn.model_selection import train_test_split
 import graphviz
 from sklearn.tree import export_graphviz
@@ -21,13 +21,15 @@ with open('arbol.dot') as f:
     dot_graph = f.read()
 graphviz.Source(dot_graph).render('arbol.dot', view=True, format='png')
 
-# grafico de barras
-caract = iris.data.shape[1]
-plt.barh(range(caract), arbol.feature_importances_)
-plt.yticks(np.arange(caract), iris.feature_names)
-plt.xlabel('Importancia de las características')
-plt.ylabel('Características')
-plt.show()
+print(dot_graph)
+
+# grafico de barras ese, no lo usamos
+# caract = iris.data.shape[1]
+# plt.barh(range(caract), arbol.feature_importances_)
+# plt.yticks(np.arange(caract), iris.feature_names)
+# plt.xlabel('Importancia de las características')
+# plt.ylabel('Características')
+# plt.show()
 
 # niveles de desicon del arbol
 arbol = DecisionTreeClassifier(max_depth=3)
