@@ -27,11 +27,7 @@ def entropia_atributo(dataset, atributo):
 
 
 
-class posicion():
 
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
 
 
 
