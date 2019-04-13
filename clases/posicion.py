@@ -1,4 +1,6 @@
-class posicion():
+
+
+class Posicion:
 
     def __init__(self, x, y):
         self.x = x
