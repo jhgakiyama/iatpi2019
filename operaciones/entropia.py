@@ -27,12 +27,12 @@ def entropia_atributo(dataset, atributo):
 
 
 
-class punto():
+class posicion():
 
-    def __init__(self, x, y, clase):
+    def __init__(self, x, y):
         self.x = x
         self.y = y
-        self.clase = clase
+
 
 
 class dataset():
