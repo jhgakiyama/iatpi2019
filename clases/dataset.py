@@ -1,8 +1,8 @@
 
 
-class Dataset:
+class Dataset2:
 
-    def __init__(self, registros):
+    def __init__(self, registros = []):
         self.registros = registros
 
     def agregar_registro(self, registro):
