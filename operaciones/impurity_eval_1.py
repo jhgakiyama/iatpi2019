@@ -1,4 +1,4 @@
-from operaciones import logaritmo_base_2
+from operaciones.logaritmo_base_2 import logaritmo_base_2
 
 def entropy_dataset(dataset):
     size = len(dataset.registros)

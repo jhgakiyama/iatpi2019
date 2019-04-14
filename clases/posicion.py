@@ -1,6 +1,6 @@
 
 
-class posicion:
+class Posicion:
     x: str
     y: str
 
@@ -8,4 +8,5 @@ class posicion:
         self.x = x
         self.y = y
 
-
+    def __str__(self):
+        return self.x + ' ' + self.y
