@@ -1,6 +1,6 @@
 
 
-class Registro:
+class registro:
 
     def __init__(self, posicion, clase):
         self.posicion = posicion
