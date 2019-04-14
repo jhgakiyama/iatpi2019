@@ -1,21 +1,25 @@
-from operaciones import logaritmo_base_2
+from operaciones.logaritmo_base_2 import logaritmo_base_2
+from clases.dataset import Dataset
+from clases.registro import Registro
 
-def entropy_dataset(dataset):
-    size = len(dataset.registros)
+
+def entropy_dataset(dataset: Dataset):
+    primer_registro: Registro = dataset.primer_registro()
+    registros = dataset.registros
+    primer_clase = primer_registro.clase
+
+    size = len(registros)
     c1 = 0
     c2 = 0
 
-    clase1 = dataset.registros[0].clase
-
-    for i in dataset.registros:
-        if i.clase == clase1:
+    # cuento la cantidad de elementos de cada "clase" hay en el dataset
+    for registro in registros:
+        if registro.clase == primer_clase:
             c1 += 1
         else:
             c2 += 1
 
-    prob1 = c1 / size
-    prob2 = c2 / size
+    n1 = c1 / size
+    n2 = c2 / size
 
-    # contolar log(0)
-
-    return (prob1 * log2(prob1) + prob2 * log2(prob2)) * (-1)
+    return (n1 * logaritmo_base_2(n1) + n2 * logaritmo_base_2(n2)) * (-1)

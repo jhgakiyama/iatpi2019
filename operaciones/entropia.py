@@ -65,25 +65,3 @@ class dataset():
 
 
 
-punto1 = punto('tecnica', 'si', 'regular')
-punto2 = punto('tecnica', 'si', 'regular')
-punto3 = punto('no tecnica', 'si', 'regular')
-punto4 = punto('no tecnica', 'no', 'libre')
-punto5 = punto('tecnica', 'si', 'regular')
-punto6 = punto('tecnica', 'no', 'libre')
-
-midataset = dataset()
-
-midataset.agregar_punto(punto1)
-midataset.agregar_punto(punto2)
-midataset.agregar_punto(punto3)
-midataset.agregar_punto(punto4)
-midataset.agregar_punto(punto5)
-midataset.agregar_punto(punto6)
-
-midataset.listar()
-
-print(midataset.entropy_class())
-
-print(entropia_atributo(midataset, 'x'))
-# print(entropia_atributo(midataset, 'y'))

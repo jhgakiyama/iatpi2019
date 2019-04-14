@@ -2,7 +2,7 @@
 
 class Dataset:
 
-    def __init__(self, registros):
+    def __init__(self, registros = []):
         self.registros = registros
 
     def agregar_registro(self, registro):
@@ -11,3 +11,6 @@ class Dataset:
     def mostrar(self):
         for i in self.registros:
             print(i)
+
+    def primer_registro(self):
+        return self.registros[0]
