@@ -1,6 +1,7 @@
 from clases.dataset import Dataset
 from clases.registro import Registro
 from clases.posicion import Posicion
+from operaciones.impurity_eval_1 import entropy_dataset
 
 p1 = Posicion('tecnica', 'si')
 p2 = Posicion('tecnica', 'no')
@@ -22,4 +23,4 @@ mydataset.agregar_registro(r4)
 mydataset.agregar_registro(r5)
 mydataset.agregar_registro(r6)
 
-print(mydataset.mostrar())
+print(entropy_dataset(mydataset))
