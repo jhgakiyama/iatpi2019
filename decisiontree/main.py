@@ -1,8 +1,14 @@
-#importar las librerias necesarias
+from clases.dataset import dataset
+from clases.registro import registro
+from clases.posicion import posicion
 
-#1) importar dataset de training
 
-#2) armar arbol de decision
+
+p1 = posicion(4,3)
+print(type(p1))
+
+
+
 
 
 
